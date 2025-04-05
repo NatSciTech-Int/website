@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: 255, 255, 255;
+  --background: 10, 15, 30;
+
+  --primary-light: 100, 210, 255;
+  --primary: 30, 144, 255;
+  --primary-dark: 20, 100, 180;
+
+  --secondary-light: 100, 255, 180;
+  --secondary: 30, 200, 120;
+  --secondary-dark: 20, 150, 90;
+
+  --accent: 255, 100, 130;
+
+  --card: 20, 30, 50;
+  --card-foreground: 255, 255, 255;
+
+  --popover: 20, 30, 50;
+  --popover-foreground: 255, 255, 255;
+
+  --muted: 40, 50, 70;
+  --muted-foreground: 200, 210, 230;
+
+  --border: 40, 50, 70;
+  --input: 40, 50, 70;
+
+  --ring: 30, 144, 255;
+
+  --radius: 0.75rem;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+}
+
+.clip-diagonal-reverse {
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+}
+
+.clip-wave {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 75% 95%, 50% 90%, 25% 95%, 0% 90%);
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(to right, rgb(var(--primary-light)), rgb(var(--secondary-light)));
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(to right, rgb(var(--primary)), rgb(var(--secondary)));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay-1 {
+  animation: float 6s ease-in-out 1s infinite;
+}
+
+.animate-float-delay-2 {
+  animation: float 6s ease-in-out 2s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hexagon {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(var(--primary), 0.2);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(var(--primary-light), 0.5);
+}
+
+.section-padding {
+  @apply py-16 md:py-20;
+}
+
+.blob-shape {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.blob-shape-alt {
+  border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+}
+
+/* Content container for better readability */
+.content-container {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
