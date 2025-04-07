@@ -19,7 +19,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/hero-bg.jpg" alt="Hero Background" fill className="object-cover opacity-20" priority />
+          <Image src="/rockymountain.jpg" alt="Hero Background" fill className="object-cover opacity-20" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a101e] via-transparent to-[#0a101e]"></div>
 
           {/* Animated Particles - Reduced intensity */}
