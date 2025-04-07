@@ -1,5 +1,15 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Privacy Policy for the Natural Science & Technology Organization website and programs.",
+  openGraph: {
+    title: "Privacy Policy | NatSciTech",
+    description: "Privacy Policy for the Natural Science & Technology Organization website and programs.",
+  },
+}
 
 export default function Privacy() {
   return (

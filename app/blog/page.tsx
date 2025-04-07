@@ -1,6 +1,18 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Calendar, ChevronRight } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Explore articles, research highlights, and student features from our global community of high school scientists and researchers.",
+  openGraph: {
+    title: "NatSciTech Blog",
+    description:
+      "Explore articles, research highlights, and student features from our global community of high school scientists and researchers.",
+  },
+}
 
 export default function Blog() {
   return (
@@ -62,13 +74,7 @@ export default function Blog() {
                 </p>
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-10 h-10 rounded-full overflow-hidden bg-primary/20">
-                    <Image
-                      src="/placeholder.svg?height=100&width=100"
-                      alt="Author"
-                      width={40}
-                      height={40}
-                      className="object-cover"
-                    />
+                    <Image src="/images/student-5.jpg" alt="Author" width={40} height={40} className="object-cover" />
                   </div>
                   <div>
                     <p className="text-white font-medium">Emma Chen</p>

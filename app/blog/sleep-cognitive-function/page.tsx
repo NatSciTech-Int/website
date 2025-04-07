@@ -1,6 +1,26 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Calendar, Share2 } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "The Impact of Sleep on Cognitive Function in Adolescents",
+  description:
+    "This research article explores the relationship between sleep patterns and cognitive performance in high school students, with implications for academic scheduling and student well-being.",
+  openGraph: {
+    title: "The Impact of Sleep on Cognitive Function in Adolescents | NatSciTech Blog",
+    description:
+      "This research article explores the relationship between sleep patterns and cognitive performance in high school students, with implications for academic scheduling and student well-being.",
+    images: [
+      {
+        url: "https://natscitech.vercel.app/images/neuroscience.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sleep and Cognitive Function",
+      },
+    ],
+  },
+}
 
 export default function BlogPost() {
   return (
@@ -30,13 +50,7 @@ export default function BlogPost() {
             </h1>
             <div className="flex items-center space-x-4">
               <div className="w-10 h-10 rounded-full overflow-hidden bg-primary/20">
-                <Image
-                  src="/placeholder.svg?height=100&width=100"
-                  alt="Author"
-                  width={40}
-                  height={40}
-                  className="object-cover"
-                />
+                <Image src="/images/student-5.jpg" alt="Author" width={40} height={40} className="object-cover" />
               </div>
               <div>
                 <p className="text-white font-medium">Emma Chen</p>

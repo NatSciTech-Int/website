@@ -1,6 +1,16 @@
 import Link from "next/link"
 import { Mail, Instagram, Globe, MapPin, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get in touch with the Natural Science & Technology Organization. We'd love to hear from you!",
+  openGraph: {
+    title: "Contact NatSciTech",
+    description: "Get in touch with the Natural Science & Technology Organization. We'd love to hear from you!",
+  },
+}
 
 export default function Contact() {
   return (
@@ -103,7 +113,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">Location</h3>
-                      <p className="text-white/80">International Organization (Online)</p>
+                      <p className="text-white/80">Mississauga, Canada (Online)</p>
                     </div>
                   </div>
                 </div>
