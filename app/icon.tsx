@@ -13,7 +13,6 @@ export const contentType = "image/png"
 // Image generation
 export default function Icon() {
   return new ImageResponse(
-    // ImageResponse JSX element
     <div
       style={{
         fontSize: 24,
@@ -29,9 +28,7 @@ export default function Icon() {
     >
       N
     </div>,
-    {
-      ...size,
-    },
+    size,
   )
 }
 
