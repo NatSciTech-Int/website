@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Globe, Calendar, BookOpen, Users } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Globe, Calendar, Users } from "lucide-react"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -46,13 +46,15 @@ const Footer = () => {
                   <Twitter size={18} />
                   <span>Twitter</span>
                 </Link>
-                <Link
-                  href="https://www.instagram.com/adilm.0/"
+                <a
+                  href="https://www.instagram.com/natscitech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-4 py-2 bg-white/10 hover:bg-[rgb(var(--primary))]/20 rounded-md text-white/80 hover:text-white transition-colors flex items-center space-x-2"
                 >
                   <Instagram size={18} />
                   <span>Instagram</span>
-                </Link>
+                </a>
                 <Link
                   href="#"
                   className="px-4 py-2 bg-white/10 hover:bg-[rgb(var(--primary))]/20 rounded-md text-white/80 hover:text-white transition-colors flex items-center space-x-2"
@@ -177,6 +179,17 @@ const Footer = () => {
                   <li className="flex items-start">
                     <MapPin size={14} className="text-[rgb(var(--primary-light))] mt-1 mr-2 flex-shrink-0" />
                     <span className="text-white/70">International Organization (Online)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://natscitech.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/70 hover:text-[rgb(var(--primary-light))] transition-colors flex items-center"
+                    >
+                      <Globe size={14} className="mr-2" />
+                      natscitech.vercel.app
+                    </a>
                   </li>
                 </ul>
               </div>

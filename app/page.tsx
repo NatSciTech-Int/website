@@ -19,8 +19,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[rgb(var(--primary))]/10 to-transparent opacity-30"></div>
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-[rgb(var(--secondary))]/10 to-transparent opacity-30"></div>
+          <Image src="/images/hero-bg.jpg" alt="Hero Background" fill className="object-cover opacity-20" priority />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a101e] via-transparent to-[#0a101e]"></div>
 
           {/* Animated Particles - Reduced intensity */}
           <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[rgb(var(--primary))]/5 blur-3xl animate-float"></div>
@@ -44,7 +44,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/join"
-                  className="inline-flex items-center justify-center rounded-md bg-[rgb(var(--primary))] text-white px-8 py-3 text-base font-medium shadow-md hover:bg-[rgb(var(--primary-dark))] transition-colors"
+                  className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-[rgb(var(--primary))] to-[rgb(var(--secondary))] text-white px-8 py-3 text-base font-medium shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all"
                 >
                   Join Our Community
                   <ArrowRight size={18} className="ml-2" />
@@ -58,15 +58,15 @@ export default function Home() {
               </div>
 
               <div className="mt-12 grid grid-cols-3 gap-4">
-                <div className="text-center p-3 bg-[rgb(var(--card))]/50 rounded-lg">
+                <div className="text-center p-3 bg-[rgb(var(--card))]/50 backdrop-blur-sm rounded-lg">
                   <p className="text-3xl font-bold text-[rgb(var(--primary-light))] mb-1">108+</p>
                   <p className="text-sm text-white/80">Members</p>
                 </div>
-                <div className="text-center p-3 bg-[rgb(var(--card))]/50 rounded-lg">
+                <div className="text-center p-3 bg-[rgb(var(--card))]/50 backdrop-blur-sm rounded-lg">
                   <p className="text-3xl font-bold text-[rgb(var(--secondary-light))] mb-1">24</p>
                   <p className="text-sm text-white/80">Countries</p>
                 </div>
-                <div className="text-center p-3 bg-[rgb(var(--card))]/50 rounded-lg">
+                <div className="text-center p-3 bg-[rgb(var(--card))]/50 backdrop-blur-sm rounded-lg">
                   <p className="text-3xl font-bold text-[rgb(var(--primary-light))] mb-1">40+</p>
                   <p className="text-sm text-white/80">Projects</p>
                 </div>
@@ -74,9 +74,9 @@ export default function Home() {
             </div>
 
             <div className="order-1 lg:order-2 relative">
-              <div className="relative h-[400px] w-full rounded-2xl overflow-hidden border border-white/10">
+              <div className="relative h-[400px] w-full rounded-2xl overflow-hidden border border-white/10 shadow-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=600"
+                  src="/images/science-students.jpg"
                   alt="Students collaborating on science project"
                   fill
                   className="object-cover"
@@ -158,7 +158,7 @@ export default function Home() {
               </div>
 
               <div className="lg:col-span-2 relative min-h-[300px] lg:min-h-full">
-                <Image src="/placeholder.svg?height=600&width=400" alt="Blog Contest" fill className="object-cover" />
+                <Image src="/images/blog-contest.jpg" alt="Blog Contest" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-r from-[rgb(var(--card))] to-transparent lg:bg-gradient-to-l"></div>
               </div>
             </div>
@@ -324,7 +324,7 @@ export default function Home() {
             {/* Blog Post 1 */}
             <div className="bg-[rgb(var(--card))] rounded-lg overflow-hidden border border-[rgb(var(--border))]">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=300&width=500" alt="Blog Post" fill className="object-cover" />
+                <Image src="/images/physics.jpg" alt="Blog Post" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <div className="flex items-center space-x-2 mb-3">
@@ -350,7 +350,7 @@ export default function Home() {
             {/* Blog Post 2 */}
             <div className="bg-[rgb(var(--card))] rounded-lg overflow-hidden border border-[rgb(var(--border))]">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=300&width=500" alt="Blog Post" fill className="object-cover" />
+                <Image src="/images/neuroscience.jpg" alt="Blog Post" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <div className="flex items-center space-x-2 mb-3">
@@ -376,7 +376,7 @@ export default function Home() {
             {/* Blog Post 3 */}
             <div className="bg-[rgb(var(--card))] rounded-lg overflow-hidden border border-[rgb(var(--border))]">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=300&width=500" alt="Blog Post" fill className="object-cover" />
+                <Image src="/images/engineering.jpg" alt="Blog Post" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <div className="flex items-center space-x-2 mb-3">

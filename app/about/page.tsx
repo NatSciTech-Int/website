@@ -1,6 +1,18 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Check, ArrowRight, BookOpen, Lightbulb, Target } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn about the Natural Science & Technology Organization, our mission, vision, values, and the team behind our international high school science community.",
+  openGraph: {
+    title: "About NatSciTech",
+    description:
+      "Learn about the Natural Science & Technology Organization, our mission, vision, values, and the team behind our international high school science community.",
+  },
+}
 
 export default function About() {
   return (
@@ -8,12 +20,8 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary/20 to-transparent opacity-30"></div>
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-secondary/20 to-transparent opacity-30"></div>
-
-          {/* Animated Particles */}
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-secondary/10 blur-3xl animate-float-delay-2"></div>
+          <Image src="/images/team-bg.jpg" alt="About Background" fill className="object-cover opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a101e] via-transparent to-[#0a101e]"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -41,7 +49,12 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="relative h-[400px] w-full blob-shape-alt overflow-hidden border-2 border-white/10 glow-effect">
-                <Image src="/placeholder.svg?height=600&width=600" alt="Our story" fill className="object-cover" />
+                <Image
+                  src="/images/science-students.jpg"
+                  alt="Students collaborating on science projects"
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-card rounded-2xl shadow-lg p-4 flex items-center justify-center border border-white/10">
@@ -158,105 +171,93 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Team Member 1 */}
+            {/* Team Member 1 - Joshua Fung */}
             <div className="bg-card rounded-3xl overflow-hidden card-hover border border-white/5">
               <div className="relative h-64 w-full">
-                <Image src="/placeholder.svg?height=300&width=300" alt="Team Member" fill className="object-cover" />
+                <Image src="/images/student-1.jpg" alt="Joshua Fung" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent"></div>
               </div>
               <div className="p-6 relative -mt-20">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-card mx-auto mb-4">
                   <Image
-                    src="/placeholder.svg?height=100&width=100"
-                    alt="Team Member"
+                    src="/images/student-1.jpg"
+                    alt="Joshua Fung"
                     width={80}
                     height={80}
                     className="object-cover"
                   />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-semibold text-white">Emma Chen</h3>
+                  <h3 className="text-xl font-semibold text-white">Joshua Fung</h3>
                   <p className="text-primary-light font-medium mb-3">President</p>
                   <p className="text-sm text-white/70">
-                    Senior at International High School, passionate about neuroscience and AI research.
+                    Senior at Mississauga High School, passionate about scientific research and leadership.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Team Member 2 */}
+            {/* Team Member 2 - Adil Mukhi */}
             <div className="bg-card rounded-3xl overflow-hidden card-hover border border-white/5">
               <div className="relative h-64 w-full">
-                <Image src="/placeholder.svg?height=300&width=300" alt="Team Member" fill className="object-cover" />
+                <Image src="/images/adil-mukhi.png" alt="Adil Mukhi" fill className="object-cover object-top" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent"></div>
               </div>
               <div className="p-6 relative -mt-20">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-card mx-auto mb-4">
                   <Image
-                    src="/placeholder.svg?height=100&width=100"
-                    alt="Team Member"
+                    src="/images/adil-mukhi.png"
+                    alt="Adil Mukhi"
                     width={80}
                     height={80}
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-semibold text-white">Rahim Patel</h3>
-                  <p className="text-secondary-light font-medium mb-3">Vice President</p>
+                  <h3 className="text-xl font-semibold text-white">Adil Mukhi</h3>
+                  <p className="text-primary-light font-medium mb-3">Director of Technology</p>
                   <p className="text-sm text-white/70">
-                    Junior at Global Academy, focused on renewable energy engineering and sustainability.
+                    A passionate student from Mississauga, with a strong interest in science, medicine, and research.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Team Member 3 */}
+            {/* Team Member 3 - Garima Pal */}
             <div className="bg-card rounded-3xl overflow-hidden card-hover border border-white/5">
               <div className="relative h-64 w-full">
-                <Image src="/placeholder.svg?height=300&width=300" alt="Team Member" fill className="object-cover" />
+                <Image src="/images/student-3.jpg" alt="Garima Pal" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent"></div>
               </div>
               <div className="p-6 relative -mt-20">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-card mx-auto mb-4">
-                  <Image
-                    src="/placeholder.svg?height=100&width=100"
-                    alt="Team Member"
-                    width={80}
-                    height={80}
-                    className="object-cover"
-                  />
+                  <Image src="/images/student-3.jpg" alt="Garima Pal" width={80} height={80} className="object-cover" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-semibold text-white">Sofia Rodriguez</h3>
-                  <p className="text-primary-light font-medium mb-3">Programs Director</p>
+                  <h3 className="text-xl font-semibold text-white">Garima Pal</h3>
+                  <p className="text-secondary-light font-medium mb-3">Technology Team</p>
                   <p className="text-sm text-white/70">
-                    Senior at Science Academy, researching astrophysics and quantum computing.
+                    Junior at Mississauga STEM Academy, specializing in computer science and web development.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Team Member 4 */}
+            {/* Team Member 4 - Lucas */}
             <div className="bg-card rounded-3xl overflow-hidden card-hover border border-white/5">
               <div className="relative h-64 w-full">
-                <Image src="/placeholder.svg?height=300&width=300" alt="Team Member" fill className="object-cover" />
+                <Image src="/images/student-4.jpg" alt="Lucas" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent"></div>
               </div>
               <div className="p-6 relative -mt-20">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-card mx-auto mb-4">
-                  <Image
-                    src="/placeholder.svg?height=100&width=100"
-                    alt="Team Member"
-                    width={80}
-                    height={80}
-                    className="object-cover"
-                  />
+                  <Image src="/images/student-4.jpg" alt="Lucas" width={80} height={80} className="object-cover" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-semibold text-white">David Kim</h3>
-                  <p className="text-secondary-light font-medium mb-3">Communications Lead</p>
+                  <h3 className="text-xl font-semibold text-white">Lucas</h3>
+                  <p className="text-primary-light font-medium mb-3">Technology Team</p>
                   <p className="text-sm text-white/70">
-                    Junior at STEM High School, specializing in psychology and cognitive science.
+                    Senior at Mississauga Tech Academy, focused on software development and AI applications.
                   </p>
                 </div>
               </div>

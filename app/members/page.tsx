@@ -1,6 +1,18 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, MapPin, GraduationCap, Award, Globe, ExternalLink, Instagram } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Our Members",
+  description:
+    "Meet the members of the Natural Science & Technology Organization, a global community of high school students passionate about science and technology.",
+  openGraph: {
+    title: "NatSciTech Members",
+    description:
+      "Meet the members of the Natural Science & Technology Organization, a global community of high school students passionate about science and technology.",
+  },
+}
 
 export default function Members() {
   return (
@@ -42,7 +54,7 @@ export default function Members() {
               <p className="text-white/80">Countries Represented</p>
             </div>
             <div className="bg-[rgb(var(--card))] rounded-lg p-8 text-center border border-[rgb(var(--border))]">
-              <p className="text-4xl font-bold gradient-text mb-3">12</p>
+              <p className="text-4xl font-bold gradient-text mb-3">4</p>
               <p className="text-white/80">Leadership Team</p>
             </div>
             <div className="bg-[rgb(var(--card))] rounded-lg p-8 text-center border border-[rgb(var(--border))]">
@@ -63,63 +75,33 @@ export default function Members() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-2xl font-bold mb-8 gradient-text">Leadership Team</h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Leadership Member 1 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+            {/* Leadership Member 1 - Joshua Fung */}
             <div className="bg-[rgb(var(--card))] rounded-lg overflow-hidden border border-[rgb(var(--border))] hover:border-[rgb(var(--primary))]/50 transition-colors">
               <div className="relative h-48 w-full">
-                <Image src="/placeholder.svg?height=300&width=500" alt="Team Member" fill className="object-cover" />
+                <Image src="/images/student-1.jpg" alt="Joshua Fung" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-semibold text-white">Emma Chen</h3>
+                  <h3 className="text-xl font-semibold text-white">Joshua Fung</h3>
                   <span className="px-3 py-1 bg-[rgb(var(--primary))]/20 text-[rgb(var(--primary-light))] text-xs rounded-md">
                     President
                   </span>
                 </div>
                 <div className="flex items-center text-white/60 text-sm mb-2">
                   <MapPin size={14} className="mr-1 text-[rgb(var(--primary-light))]" />
-                  San Francisco, USA
+                  Mississauga, Canada
                 </div>
                 <div className="flex items-center text-white/60 text-sm mb-4">
                   <GraduationCap size={14} className="mr-1 text-[rgb(var(--primary-light))]" />
-                  International High School, Senior
+                  Mississauga High School, Senior
                 </div>
                 <p className="text-white/80 text-sm mb-4 leading-relaxed">
-                  Leading research in neuroscience and artificial intelligence. Founder of NatSciTech with a passion for
-                  making scientific education accessible to all.
+                  Leading the organization with a passion for scientific research and leadership. Committed to advancing
+                  science and technology education globally.
                 </p>
                 <div className="flex items-center text-xs text-white/60">
-                  <Award size={14} className="mr-1 text-[rgb(var(--secondary-light))]" />3 Research Publications
-                </div>
-              </div>
-            </div>
-
-            {/* Leadership Member 2 */}
-            <div className="bg-[rgb(var(--card))] rounded-lg overflow-hidden border border-[rgb(var(--border))] hover:border-[rgb(var(--secondary))]/50 transition-colors">
-              <div className="relative h-48 w-full">
-                <Image src="/placeholder.svg?height=300&width=500" alt="Team Member" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-semibold text-white">Rahim Patel</h3>
-                  <span className="px-3 py-1 bg-[rgb(var(--secondary))]/20 text-[rgb(var(--secondary-light))] text-xs rounded-md">
-                    Vice President
-                  </span>
-                </div>
-                <div className="flex items-center text-white/60 text-sm mb-2">
-                  <MapPin size={14} className="mr-1 text-[rgb(var(--secondary-light))]" />
-                  London, UK
-                </div>
-                <div className="flex items-center text-white/60 text-sm mb-4">
-                  <GraduationCap size={14} className="mr-1 text-[rgb(var(--secondary-light))]" />
-                  Global Academy, Junior
-                </div>
-                <p className="text-white/80 text-sm mb-4 leading-relaxed">
-                  Focused on renewable energy engineering and sustainability. Leading our international outreach and
-                  partnership initiatives.
-                </p>
-                <div className="flex items-center text-xs text-white/60">
-                  <Award size={14} className="mr-1 text-[rgb(var(--secondary-light))]" />2 Research Publications
+                  <Award size={14} className="mr-1 text-[rgb(var(--secondary-light))]" />4 Research Publications
                 </div>
               </div>
             </div>
@@ -138,7 +120,7 @@ export default function Members() {
                 </div>
                 <div className="flex items-center text-white/60 text-sm mb-2">
                   <MapPin size={14} className="mr-1 text-[rgb(var(--primary-light))]" />
-                  International
+                  Mississauga, Canada
                 </div>
                 <div className="flex items-center text-white/60 text-sm mb-4">
                   <GraduationCap size={14} className="mr-1 text-[rgb(var(--primary-light))]" />
@@ -179,67 +161,66 @@ export default function Members() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Regular Members */}
-      <section className="py-16 md:py-24 relative overflow-hidden bg-[#0d1424]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="text-2xl font-bold mb-8 text-white">Our Members</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {/* Generate 8 member cards */}
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div
-                key={i}
-                className="bg-[rgb(var(--card))]/70 rounded-lg overflow-hidden border border-[rgb(var(--border))] hover:border-[rgb(var(--primary))]/30 transition-colors"
-              >
-                <div className="relative h-40 w-full">
-                  <Image src="/placeholder.svg?height=200&width=300" alt="Member" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--card))]/90 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center">
-                    <h3 className="text-lg font-semibold text-white">{`Member ${i + 1}`}</h3>
-                    <div className="flex items-center text-white/60 text-xs">
-                      <MapPin size={12} className="mr-1" />
-                      {["USA", "UK", "Canada", "India", "Japan", "Brazil", "Germany", "Australia"][i % 8]}
-                    </div>
-                  </div>
+            {/* Garima Pal - Technology Team */}
+            <div className="bg-[rgb(var(--card))] rounded-lg overflow-hidden border border-[rgb(var(--border))] hover:border-[rgb(var(--secondary))]/50 transition-colors">
+              <div className="relative h-48 w-full">
+                <Image src="/images/student-3.jpg" alt="Garima Pal" fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-semibold text-white">Garima Pal</h3>
+                  <span className="px-3 py-1 bg-[rgb(var(--secondary))]/20 text-[rgb(var(--secondary-light))] text-xs rounded-md">
+                    Technology Team
+                  </span>
                 </div>
-                <div className="p-4">
-                  <div className="flex items-center text-white/60 text-xs mb-3">
-                    <GraduationCap size={12} className="mr-1" />
-                    {["Junior", "Senior", "Sophomore", "Senior"][i % 4]}
-                  </div>
-                  <div className="flex flex-wrap gap-1 mb-2">
-                    {i % 2 === 0 ? (
-                      <span className="px-2 py-0.5 bg-[rgb(var(--primary))]/20 text-[rgb(var(--primary-light))] text-xs rounded-md">
-                        Physics
-                      </span>
-                    ) : (
-                      <span className="px-2 py-0.5 bg-[rgb(var(--secondary))]/20 text-[rgb(var(--secondary-light))] text-xs rounded-md">
-                        Psychology
-                      </span>
-                    )}
-                    {i % 3 === 0 && (
-                      <span className="px-2 py-0.5 bg-[rgb(var(--muted))]/50 text-white/80 text-xs rounded-md">
-                        Engineering
-                      </span>
-                    )}
-                  </div>
+                <div className="flex items-center text-white/60 text-sm mb-2">
+                  <MapPin size={14} className="mr-1 text-[rgb(var(--secondary-light))]" />
+                  Mississauga, Canada
+                </div>
+                <div className="flex items-center text-white/60 text-sm mb-4">
+                  <GraduationCap size={14} className="mr-1 text-[rgb(var(--secondary-light))]" />
+                  Mississauga STEM Academy, Junior
+                </div>
+                <p className="text-white/80 text-sm mb-4 leading-relaxed">
+                  Specializing in computer science and web development. Passionate about creating technology solutions
+                  for scientific research and education.
+                </p>
+                <div className="flex items-center text-xs text-white/60">
+                  <Award size={14} className="mr-1 text-[rgb(var(--secondary-light))]" />2 Tech Projects
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="mt-12 flex justify-center">
-            <nav className="inline-flex rounded-lg overflow-hidden bg-[rgb(var(--card))]/50 p-1 border border-[rgb(var(--border))]">
-              <button className="px-3 py-1 text-white/50 hover:text-white transition-colors">Previous</button>
-              <button className="px-3 py-1 rounded-md bg-[rgb(var(--primary))] text-white">1</button>
-              <button className="px-3 py-1 text-white/50 hover:text-white transition-colors">2</button>
-              <button className="px-3 py-1 text-white/50 hover:text-white transition-colors">3</button>
-              <button className="px-3 py-1 text-white/50 hover:text-white transition-colors">Next</button>
-            </nav>
+            {/* Lucas - Technology Team */}
+            <div className="bg-[rgb(var(--card))] rounded-lg overflow-hidden border border-[rgb(var(--border))] hover:border-[rgb(var(--primary))]/50 transition-colors">
+              <div className="relative h-48 w-full">
+                <Image src="/images/student-4.jpg" alt="Lucas" fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-semibold text-white">Lucas</h3>
+                  <span className="px-3 py-1 bg-[rgb(var(--primary))]/20 text-[rgb(var(--primary-light))] text-xs rounded-md">
+                    Technology Team
+                  </span>
+                </div>
+                <div className="flex items-center text-white/60 text-sm mb-2">
+                  <MapPin size={14} className="mr-1 text-[rgb(var(--primary-light))]" />
+                  Mississauga, Canada
+                </div>
+                <div className="flex items-center text-white/60 text-sm mb-4">
+                  <GraduationCap size={14} className="mr-1 text-[rgb(var(--primary-light))]" />
+                  Mississauga Tech Academy, Senior
+                </div>
+                <p className="text-white/80 text-sm mb-4 leading-relaxed">
+                  Focused on software development and AI applications. Contributes to the organization's technical
+                  infrastructure and digital presence.
+                </p>
+                <div className="flex items-center text-xs text-white/60">
+                  <Award size={14} className="mr-1 text-[rgb(var(--primary-light))]" />3 Tech Projects
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
