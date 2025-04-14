@@ -1,152 +1,345 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Calendar, ChevronRight } from "lucide-react"
-import type { Metadata } from "next"
+import {
+  ArrowRight,
+  Atom,
+  Brain,
+  Cpu,
+  ChevronRight,
+  Lightbulb,
+  GraduationCap,
+  Award,
+  Globe,
+  ExternalLink,
+} from "lucide-react"
 
-// Update the metadata
-export const metadata: Metadata = {
-  title: "Blog",
-  description:
-    "Explore articles, research highlights, and student features from our global community of high school scientists and researchers.",
-  openGraph: {
-    title: "LibSci Blog",
-    description:
-      "Explore articles, research highlights, and student features from our global community of high school scientists and researchers.",
-  },
-}
-
-export default function Blog() {
+export default function Home() {
   return (
     <div className="pt-24">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary/20 to-transparent opacity-30"></div>
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-secondary/20 to-transparent opacity-30"></div>
+          <Image src="/rockymountain.jpg" alt="Hero Background" fill className="object-cover opacity-20" priority />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a101e] via-transparent to-[#0a101e]"></div>
 
-          {/* Animated Particles */}
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-secondary/10 blur-3xl animate-float-delay-2"></div>
+          {/* Animated Particles - Reduced intensity */}
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[rgb(var(--primary))]/5 blur-3xl animate-float"></div>
+          <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full bg-[rgb(var(--secondary))]/5 blur-3xl animate-float-delay-1"></div>
+          <div className="absolute bottom-1/4 right-1/3 w-56 h-56 rounded-full bg-[rgb(var(--primary))]/5 blur-3xl animate-float-delay-2"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block px-4 py-1 rounded-full text-xs font-medium bg-muted text-white/90 mb-6">
-              Our Blog
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Scientific Insights</h1>
-            <p className="text-xl text-white/80">
-              Explore articles, research highlights, and student features from our global community
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Post */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <div className="inline-block px-4 py-1 rounded-full text-xs font-medium bg-primary/20 text-primary-light mb-4">
-              Featured Article
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Student Feature</h2>
-          </div>
-
-          <div className="bg-card rounded-xl overflow-hidden border border-white/10 shadow-lg">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-              <div className="relative h-64 lg:h-auto">
-                <Image src="/images/physics.jpg" alt="Featured Post" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card lg:bg-gradient-to-l"></div>
-              </div>
-              <div className="p-8 md:p-10">
-                <div className="flex items-center space-x-4 mb-4">
-                  <span className="px-3 py-1 bg-primary/20 text-primary-light text-xs rounded-full">Physics</span>
-                  <span className="text-white/60 text-xs flex items-center">
-                    <Calendar size={12} className="mr-1" />
-                    March 10, 2025
-                  </span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
-                  Ronald Mallett: The Physicist's Quest for Time Travel
-                </h3>
-                <p className="text-white/80 mb-6">
-                  Exploring the theories and work of physicist Ronald Mallett on time travel through circulating light
-                  beams and closed timelike curves.
-                </p>
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-10 h-10 rounded-full overflow-hidden bg-primary/20">
-                    <Image src="/images/student-1.jpg" alt="Author" width={40} height={40} className="object-cover" />
-                  </div>
-                  <div>
-                    <p className="text-white font-medium">Joshua Fung</p>
-                    <p className="text-white/60 text-sm">President</p>
-                  </div>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                <span className="gradient-text">Advancing</span> Science & Technology Education
+              </h1>
+              <p className="text-xl text-white/90 mb-8 max-w-xl leading-relaxed">
+                An international high school club fostering innovation and collaboration in natural sciences and
+                technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/blog/ronald-mallett-time-travel"
-                  className="inline-flex items-center justify-center rounded-md bg-primary text-white px-6 py-3 text-base font-medium hover:bg-primary-dark transition-colors"
+                  href="/join"
+                  className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-[rgb(var(--primary))] to-[rgb(var(--secondary))] text-white px-8 py-3 text-base font-medium shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all"
                 >
-                  Read Full Article
+                  Join Our Community
                   <ArrowRight size={18} className="ml-2" />
                 </Link>
+                <Link
+                  href="/programs"
+                  className="inline-flex items-center justify-center rounded-md bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-3 text-base font-medium hover:bg-white/20 transition-colors"
+                >
+                  Explore Programs
+                </Link>
+              </div>
+
+              <div className="mt-12 grid grid-cols-3 gap-4">
+                <div className="text-center p-3 bg-[rgb(var(--card))]/50 backdrop-blur-sm rounded-lg">
+                  <p className="text-3xl font-bold text-[rgb(var(--primary-light))] mb-1">108+</p>
+                  <p className="text-sm text-white/80">Members</p>
+                </div>
+                <div className="text-center p-3 bg-[rgb(var(--card))]/50 backdrop-blur-sm rounded-lg">
+                  <p className="text-3xl font-bold text-[rgb(var(--secondary-light))] mb-1">24</p>
+                  <p className="text-sm text-white/80">Countries</p>
+                </div>
+                <div className="text-center p-3 bg-[rgb(var(--card))]/50 backdrop-blur-sm rounded-lg">
+                  <p className="text-3xl font-bold text-[rgb(var(--primary-light))] mb-1">40+</p>
+                  <p className="text-sm text-white/80">Projects</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2 relative">
+              <div className="relative h-[400px] w-full rounded-2xl overflow-hidden border border-white/10 shadow-lg">
+                <Image
+                  src="/images/science-students.jpg"
+                  alt="Students collaborating on science project"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a101e]/70 to-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#0a101e] to-transparent"></div>
+      </section>
+
+      {/* Featured Program Section */}
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="inline-block px-4 py-1 rounded-full text-xs font-medium bg-[rgb(var(--muted))]/50 text-white mb-4">
+              Featured Program
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Blog Publication Contest</h2>
+            <p className="text-white/90 text-lg">
+              Join our exciting blog publication contest for secondary school students worldwide!
+            </p>
+          </div>
+
+          <div className="bg-[rgb(var(--card))] rounded-xl overflow-hidden shadow-lg border border-[rgb(var(--border))]">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
+              <div className="lg:col-span-3 p-8 md:p-10">
+                <div className="inline-block px-4 py-1 rounded-full text-xs font-medium bg-[rgb(var(--primary))]/20 text-[rgb(var(--primary-light))] mb-6">
+                  Contest Now Open
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">
+                  The NatSciTech March Blog Publication Contest
+                </h3>
+                <p className="text-white/90 mb-8 leading-relaxed">
+                  Choose any subject related to Physics, Neuroscience, Engineering, Psychology, or any combination of
+                  these to show us what you as a student can do as a researcher in STEM!
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-[rgb(var(--muted))]/20 rounded-lg p-6 border border-[rgb(var(--border))]">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 rounded-full bg-[rgb(var(--primary))]/20 flex items-center justify-center flex-shrink-0">
+                        <Award className="text-[rgb(var(--primary-light))]" size={20} />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white mb-2">1st Place</h4>
+                        <p className="text-sm text-white/80">Blog featured as NatSciTech's Student Feature</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-[rgb(var(--muted))]/20 rounded-lg p-6 border border-[rgb(var(--border))]">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 rounded-full bg-[rgb(var(--secondary))]/20 flex items-center justify-center flex-shrink-0">
+                        <Award className="text-[rgb(var(--secondary-light))]" size={20} />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white mb-2">2nd & 3rd Place</h4>
+                        <p className="text-sm text-white/80">Blogs featured on NatSciTech's March Blog</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="text-white/80 text-sm">
+                    <span className="text-[rgb(var(--primary-light))] font-semibold">Deadline:</span> March 15, 2025
+                  </div>
+                  <Link
+                    href="/programs#blog-contest"
+                    className="inline-flex items-center justify-center rounded-md bg-[rgb(var(--primary))] text-white px-6 py-2.5 text-sm font-medium hover:bg-[rgb(var(--primary-dark))] transition-colors"
+                  >
+                    Learn More & Apply
+                    <ChevronRight size={16} className="ml-1" />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="lg:col-span-2 relative min-h-[300px] lg:min-h-full">
+                <Image src="/images/blog-contest.jpg" alt="Blog Contest" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[rgb(var(--card))] to-transparent lg:bg-gradient-to-l"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Blog Contest Promotion */}
-      <section className="py-16 relative overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+      {/* Research Areas */}
+      <section className="py-20 relative bg-[#0d1424]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-card/50 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div>
-                <h3 className="text-2xl font-bold mb-2 text-white">March Blog Publication Contest</h3>
-                <p className="text-white/80 mb-4">
-                  Submit your research article for a chance to be featured as our next Student Feature!
-                </p>
-                <div className="text-white/60 text-sm">
-                  <span className="text-primary-light font-medium">Deadline:</span> March 15, 2025
-                </div>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="inline-block px-4 py-1 rounded-full text-xs font-medium bg-[rgb(var(--muted))]/50 text-white mb-4">
+              Research Areas
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Explore Our Fields</h2>
+            <p className="text-white/90 text-lg">Discover our diverse fields of study and scientific disciplines</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-[rgb(var(--card))] rounded-lg p-6 border border-[rgb(var(--border))] hover:border-[rgb(var(--primary))]/50 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-[rgb(var(--primary))]/20 flex items-center justify-center mb-6">
+                <Atom className="text-[rgb(var(--primary-light))]" size={24} />
               </div>
+              <h3 className="text-xl font-semibold mb-4 text-white">Physics</h3>
+              <p className="text-white/80 mb-6 leading-relaxed">
+                Explore the fundamental laws that govern the universe, from quantum mechanics to astrophysics.
+              </p>
               <Link
-                href="/programs#blog-contest"
-                className="inline-flex items-center justify-center rounded-md bg-primary text-white px-6 py-3 text-base font-medium hover:bg-primary-dark transition-colors whitespace-nowrap"
+                href="/programs#physics"
+                className="text-[rgb(var(--primary-light))] font-medium inline-flex items-center hover:underline"
               >
-                Learn More
-                <ArrowRight size={18} className="ml-2" />
+                Learn more <ChevronRight size={16} className="ml-1" />
+              </Link>
+            </div>
+
+            <div className="bg-[rgb(var(--card))] rounded-lg p-6 border border-[rgb(var(--border))] hover:border-[rgb(var(--secondary))]/50 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-[rgb(var(--secondary))]/20 flex items-center justify-center mb-6">
+                <Brain className="text-[rgb(var(--secondary-light))]" size={24} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-white">Neuroscience</h3>
+              <p className="text-white/80 mb-6 leading-relaxed">
+                Study the nervous system, brain function, and cognitive processes that shape human behavior.
+              </p>
+              <Link
+                href="/programs#neuroscience"
+                className="text-[rgb(var(--secondary-light))] font-medium inline-flex items-center hover:underline"
+              >
+                Learn more <ChevronRight size={16} className="ml-1" />
+              </Link>
+            </div>
+
+            <div className="bg-[rgb(var(--card))] rounded-lg p-6 border border-[rgb(var(--border))] hover:border-[rgb(var(--primary))]/50 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-[rgb(var(--primary))]/20 flex items-center justify-center mb-6">
+                <Cpu className="text-[rgb(var(--primary-light))]" size={24} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-white">Engineering</h3>
+              <p className="text-white/80 mb-6 leading-relaxed">
+                Design, build, and innovate with the application of scientific principles to solve real-world problems.
+              </p>
+              <Link
+                href="/programs#engineering"
+                className="text-[rgb(var(--primary-light))] font-medium inline-flex items-center hover:underline"
+              >
+                Learn more <ChevronRight size={16} className="ml-1" />
+              </Link>
+            </div>
+
+            <div className="bg-[rgb(var(--card))] rounded-lg p-6 border border-[rgb(var(--border))] hover:border-[rgb(var(--secondary))]/50 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-[rgb(var(--secondary))]/20 flex items-center justify-center mb-6">
+                <Lightbulb className="text-[rgb(var(--secondary-light))]" size={24} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-white">Psychology</h3>
+              <p className="text-white/80 mb-6 leading-relaxed">
+                Investigate human behavior, cognitive processes, and psychological phenomena through scientific inquiry.
+              </p>
+              <Link
+                href="/programs#psychology"
+                className="text-[rgb(var(--secondary-light))] font-medium inline-flex items-center hover:underline"
+              >
+                Learn more <ChevronRight size={16} className="ml-1" />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Recent Posts */}
-      <section className="py-16 relative overflow-hidden">
+      {/* Why Join Us */}
+      <section className="py-20 relative bg-gradient-to-b from-[rgb(var(--primary))]/10 to-[rgb(var(--secondary))]/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-8 gradient-text">Recent Articles</h2>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="inline-block px-4 py-1 rounded-full text-xs font-medium bg-white/10 text-white mb-4">
+              Why Join NatSciTech?
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Become Part of Our Community</h2>
+            <p className="text-white/90 text-lg">
+              Join a global network dedicated to advancing science and technology education
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-[rgb(var(--card))]/80 backdrop-blur-sm rounded-lg p-8 border border-[rgb(var(--border))]">
+              <div className="mx-auto w-14 h-14 rounded-lg bg-[rgb(var(--primary))]/20 flex items-center justify-center mb-6">
+                <Globe className="text-[rgb(var(--primary-light))]" size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white text-center">Global Network</h3>
+              <p className="text-white/80 text-center leading-relaxed">
+                Connect with like-minded students and mentors from around the world.
+              </p>
+            </div>
+
+            <div className="bg-[rgb(var(--card))]/80 backdrop-blur-sm rounded-lg p-8 border border-[rgb(var(--border))]">
+              <div className="mx-auto w-14 h-14 rounded-lg bg-[rgb(var(--secondary))]/20 flex items-center justify-center mb-6">
+                <GraduationCap className="text-[rgb(var(--secondary-light))]" size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white text-center">Academic Growth</h3>
+              <p className="text-white/80 text-center leading-relaxed">
+                Enhance your scientific knowledge beyond the traditional classroom setting.
+              </p>
+            </div>
+
+            <div className="bg-[rgb(var(--card))]/80 backdrop-blur-sm rounded-lg p-8 border border-[rgb(var(--border))]">
+              <div className="mx-auto w-14 h-14 rounded-lg bg-[rgb(var(--primary))]/20 flex items-center justify-center mb-6">
+                <Award className="text-[rgb(var(--primary-light))]" size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white text-center">Recognition</h3>
+              <p className="text-white/80 text-center leading-relaxed">
+                Showcase your research and writing through our publication platforms.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/join"
+              className="inline-flex items-center justify-center rounded-md bg-white text-[#0a101e] px-8 py-3 text-base font-medium hover:bg-[rgb(var(--primary-light))] hover:text-white transition-colors"
+            >
+              Become a Member
+              <ArrowRight size={18} className="ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Blog Posts */}
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <div className="inline-block px-4 py-1 rounded-full text-xs font-medium bg-[rgb(var(--muted))]/50 text-white mb-4">
+                Latest Articles
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold gradient-text">From Our Blog</h2>
+            </div>
+            <Link
+              href="/blog"
+              className="mt-4 md:mt-0 text-[rgb(var(--primary-light))] font-medium inline-flex items-center hover:underline"
+            >
+              View all articles <ExternalLink size={16} className="ml-1" />
+            </Link>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Blog Post 1 - Ronald Mallett */}
-            <div className="bg-card rounded-lg overflow-hidden border border-white/10">
+            <div className="bg-[rgb(var(--card))] rounded-lg overflow-hidden border border-[rgb(var(--border))]">
               <div className="relative h-48">
                 <Image src="/images/physics.jpg" alt="Blog Post" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <div className="flex items-center space-x-2 mb-3">
-                  <span className="px-3 py-1 bg-primary/20 text-primary-light text-xs rounded-full">Physics</span>
+                  <span className="px-3 py-1 bg-[rgb(var(--primary))]/20 text-[rgb(var(--primary-light))] text-xs rounded-full">
+                    Physics
+                  </span>
                   <span className="text-white/60 text-xs">March 10, 2025</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">
                   Ronald Mallett: The Physicist's Quest for Time Travel
                 </h3>
-                <p className="text-white/80 mb-4 line-clamp-2">
+                <p className="text-white/80 mb-4 line-clamp-2 leading-relaxed">
                   Exploring the theories and work of physicist Ronald Mallett on time travel through circulating light
                   beams and closed timelike curves.
                 </p>
                 <Link
                   href="/blog/ronald-mallett-time-travel"
-                  className="text-primary-light font-medium inline-flex items-center hover:underline"
+                  className="text-[rgb(var(--primary-light))] font-medium inline-flex items-center hover:underline"
                 >
                   Read more <ChevronRight size={16} className="ml-1" />
                 </Link>
@@ -154,13 +347,13 @@ export default function Blog() {
             </div>
 
             {/* Blog Post 2 - Sleep Cognitive Function */}
-            <div className="bg-card rounded-lg overflow-hidden border border-white/10">
+            <div className="bg-[rgb(var(--card))] rounded-lg overflow-hidden border border-[rgb(var(--border))]">
               <div className="relative h-48">
                 <Image src="/images/neuroscience.jpg" alt="Blog Post" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <div className="flex items-center space-x-2 mb-3">
-                  <span className="px-3 py-1 bg-secondary/20 text-secondary-light text-xs rounded-full">
+                  <span className="px-3 py-1 bg-[rgb(var(--secondary))]/20 text-[rgb(var(--secondary-light))] text-xs rounded-full">
                     Neuroscience
                   </span>
                   <span className="text-white/60 text-xs">March 1, 2025</span>
@@ -168,12 +361,12 @@ export default function Blog() {
                 <h3 className="text-xl font-semibold mb-3 text-white">
                   The Impact of Sleep on Cognitive Function in Adolescents
                 </h3>
-                <p className="text-white/80 mb-4 line-clamp-2">
+                <p className="text-white/80 mb-4 line-clamp-2 leading-relaxed">
                   Research on how sleep affects brain development and academic performance in high school students.
                 </p>
                 <Link
                   href="/blog/sleep-cognitive-function"
-                  className="text-secondary-light font-medium inline-flex items-center hover:underline"
+                  className="text-[rgb(var(--secondary-light))] font-medium inline-flex items-center hover:underline"
                 >
                   Read more <ChevronRight size={16} className="ml-1" />
                 </Link>
@@ -183,49 +376,21 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="py-16 relative overflow-hidden bg-[#0d1424]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-8 text-white">Categories</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {/* Join CTA */}
+      <section className="py-20 relative bg-gradient-to-r from-[rgb(var(--primary))] to-[rgb(var(--secondary))]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Join Our Community?</h2>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              Be part of a movement that's shaping the future of science and technology education.
+            </p>
             <Link
-              href="/blog/category/physics"
-              className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-primary/50 transition-colors"
+              href="/join"
+              className="inline-flex items-center justify-center rounded-md bg-white text-[#0a101e] px-8 py-3 text-base font-medium hover:bg-[rgb(var(--primary-light))] hover:text-white transition-colors"
             >
-              <h3 className="text-xl font-bold mb-2 text-white">Physics</h3>
-              <p className="text-white/60 text-sm">1 article</p>
+              Apply for Membership
+              <ArrowRight size={18} className="ml-2" />
             </Link>
-            <Link
-              href="/blog/category/neuroscience"
-              className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-secondary/50 transition-colors"
-            >
-              <h3 className="text-xl font-bold mb-2 text-white">Neuroscience</h3>
-              <p className="text-white/60 text-sm">1 article</p>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl p-8 md:p-10 border border-white/10">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Stay Updated</h2>
-              <p className="text-white/80 mb-6">
-                Follow us on Instagram to receive the latest articles, research highlights, and program updates.
-              </p>
-              <a
-                href="https://www.instagram.com/natscitech/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md bg-white text-[#0a101e] px-8 py-3 text-base font-medium hover:bg-primary-light hover:text-white transition-colors"
-              >
-                Follow @natscitech
-                <ArrowRight size={18} className="ml-2" />
-              </a>
-            </div>
           </div>
         </div>
       </section>
