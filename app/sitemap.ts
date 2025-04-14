@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://natscitech.vercel.app"
+  const baseUrl = "https://libsci.vercel.app"
 
   return [
     {
@@ -66,4 +66,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 }
-

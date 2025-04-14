@@ -17,18 +17,16 @@ const Footer = () => {
                 </div>
                 <div>
                   <h2 className="font-bold text-2xl tracking-wide">
-                    <span className="text-[rgb(var(--primary-light))]">Nat</span>
+                    <span className="text-[rgb(var(--primary-light))]">Lib</span>
                     <span className="text-white">Sci</span>
-                    <span className="text-[rgb(var(--secondary-light))]">Tech</span>
                   </h2>
                   <p className="text-white/60 text-sm">International High School Organization</p>
                 </div>
               </div>
 
               <p className="text-white/80 mb-8 max-w-lg leading-relaxed">
-                The Natural Science & Technology Organization is a non-profit working for the academic development of
-                natural sciences and technologies on an international scale, connecting high school students from around
-                the world.
+                The Library of Science is a non-profit working for the academic development of natural sciences and
+                technologies on an international scale, connecting high school students from around the world.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -47,7 +45,7 @@ const Footer = () => {
                   <span>Twitter</span>
                 </Link>
                 <a
-                  href="https://www.instagram.com/natscitech/"
+                  href="https://www.instagram.com/libsci/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-white/10 hover:bg-[rgb(var(--primary))]/20 rounded-md text-white/80 hover:text-white transition-colors flex items-center space-x-2"
@@ -169,11 +167,11 @@ const Footer = () => {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="mailto:contact@natscitech.org"
+                      href="mailto:contact@libsci.org"
                       className="text-white/70 hover:text-[rgb(var(--primary-light))] transition-colors flex items-center"
                     >
                       <Mail size={14} className="mr-2" />
-                      contact@natscitech.org
+                      contact@libsci.org
                     </a>
                   </li>
                   <li className="flex items-start">
@@ -182,13 +180,13 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="https://natscitech.vercel.app"
+                      href="https://libsci.vercel.app"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white/70 hover:text-[rgb(var(--primary-light))] transition-colors flex items-center"
                     >
                       <Globe size={14} className="mr-2" />
-                      natscitech.vercel.app
+                      libsci.vercel.app
                     </a>
                   </li>
                 </ul>
@@ -203,7 +201,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/60 text-sm mb-4 md:mb-0">
-              © {currentYear} Natural Science & Technology Organization. All rights reserved.
+              © {currentYear} Library of Science. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-white/60 hover:text-white text-sm transition-colors">
@@ -227,4 +225,3 @@ const Footer = () => {
 }
 
 export default Footer
-

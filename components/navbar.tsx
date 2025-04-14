@@ -51,11 +51,11 @@ const Navbar = () => {
               <div className="relative w-10 h-10 sm:w-12 sm:h-12">
                 <Image src="/logo.png" alt="NatSciTech Logo" fill className="object-contain" />
               </div>
+              {/* Desktop Navigation */}
               <div className="hidden md:block">
                 <h1 className="font-bold text-xl tracking-wide text-white">
-                  <span className="text-[rgb(var(--primary-light))]">Nat</span>
+                  <span className="text-[rgb(var(--primary-light))]">Lib</span>
                   <span className="text-white">Sci</span>
-                  <span className="text-[rgb(var(--secondary-light))]">Tech</span>
                 </h1>
               </div>
             </Link>
@@ -140,4 +140,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-

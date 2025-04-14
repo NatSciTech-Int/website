@@ -3,12 +3,13 @@ import Link from "next/link"
 import { ArrowRight, Calendar, ChevronRight } from "lucide-react"
 import type { Metadata } from "next"
 
+// Update the metadata
 export const metadata: Metadata = {
   title: "Blog",
   description:
     "Explore articles, research highlights, and student features from our global community of high school scientists and researchers.",
   openGraph: {
-    title: "NatSciTech Blog",
+    title: "LibSci Blog",
     description:
       "Explore articles, research highlights, and student features from our global community of high school scientists and researchers.",
   },
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Blog() {
   return (
-    <div className="pt-20">
+    <div className="pt-24">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -54,35 +55,35 @@ export default function Blog() {
           <div className="bg-card rounded-xl overflow-hidden border border-white/10 shadow-lg">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               <div className="relative h-64 lg:h-auto">
-                <Image src="/images/neuroscience.jpg" alt="Featured Post" fill className="object-cover" />
+                <Image src="/images/physics.jpg" alt="Featured Post" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card lg:bg-gradient-to-l"></div>
               </div>
               <div className="p-8 md:p-10">
                 <div className="flex items-center space-x-4 mb-4">
-                  <span className="px-3 py-1 bg-primary/20 text-primary-light text-xs rounded-full">Neuroscience</span>
+                  <span className="px-3 py-1 bg-primary/20 text-primary-light text-xs rounded-full">Physics</span>
                   <span className="text-white/60 text-xs flex items-center">
                     <Calendar size={12} className="mr-1" />
-                    March 1, 2025
+                    March 10, 2025
                   </span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
-                  The Impact of Sleep on Cognitive Function in Adolescents
+                  Ronald Mallett: The Physicist's Quest for Time Travel
                 </h3>
                 <p className="text-white/80 mb-6">
-                  This month's student feature explores the relationship between sleep patterns and cognitive
-                  performance in high school students, with implications for academic scheduling and student well-being.
+                  Exploring the theories and work of physicist Ronald Mallett on time travel through circulating light
+                  beams and closed timelike curves.
                 </p>
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-10 h-10 rounded-full overflow-hidden bg-primary/20">
-                    <Image src="/images/student-5.jpg" alt="Author" width={40} height={40} className="object-cover" />
+                    <Image src="/images/student-1.jpg" alt="Author" width={40} height={40} className="object-cover" />
                   </div>
                   <div>
-                    <p className="text-white font-medium">Emma Chen</p>
-                    <p className="text-white/60 text-sm">Student Researcher</p>
+                    <p className="text-white font-medium">Joshua Fung</p>
+                    <p className="text-white/60 text-sm">President</p>
                   </div>
                 </div>
                 <Link
-                  href="/blog/sleep-cognitive-function"
+                  href="/blog/ronald-mallett-time-travel"
                   className="inline-flex items-center justify-center rounded-md bg-primary text-white px-6 py-3 text-base font-medium hover:bg-primary-dark transition-colors"
                 >
                   Read Full Article
@@ -125,8 +126,8 @@ export default function Blog() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold mb-8 gradient-text">Recent Articles</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Blog Post 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Blog Post 1 - Ronald Mallett */}
             <div className="bg-card rounded-lg overflow-hidden border border-white/10">
               <div className="relative h-48">
                 <Image src="/images/physics.jpg" alt="Blog Post" fill className="object-cover" />
@@ -136,13 +137,15 @@ export default function Blog() {
                   <span className="px-3 py-1 bg-primary/20 text-primary-light text-xs rounded-full">Physics</span>
                   <span className="text-white/60 text-xs">March 10, 2025</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">Exploring Quantum Computing Principles</h3>
+                <h3 className="text-xl font-semibold mb-3 text-white">
+                  Ronald Mallett: The Physicist's Quest for Time Travel
+                </h3>
                 <p className="text-white/80 mb-4 line-clamp-2">
-                  An introduction to the fascinating world of quantum computing and its potential applications in
-                  solving complex problems.
+                  Exploring the theories and work of physicist Ronald Mallett on time travel through circulating light
+                  beams and closed timelike curves.
                 </p>
                 <Link
-                  href="/blog/quantum-computing"
+                  href="/blog/ronald-mallett-time-travel"
                   className="text-primary-light font-medium inline-flex items-center hover:underline"
                 >
                   Read more <ChevronRight size={16} className="ml-1" />
@@ -150,7 +153,7 @@ export default function Blog() {
               </div>
             </div>
 
-            {/* Blog Post 2 */}
+            {/* Blog Post 2 - Sleep Cognitive Function */}
             <div className="bg-card rounded-lg overflow-hidden border border-white/10">
               <div className="relative h-48">
                 <Image src="/images/neuroscience.jpg" alt="Blog Post" fill className="object-cover" />
@@ -160,108 +163,22 @@ export default function Blog() {
                   <span className="px-3 py-1 bg-secondary/20 text-secondary-light text-xs rounded-full">
                     Neuroscience
                   </span>
-                  <span className="text-white/60 text-xs">March 5, 2025</span>
+                  <span className="text-white/60 text-xs">March 1, 2025</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">The Brain's Neural Plasticity</h3>
+                <h3 className="text-xl font-semibold mb-3 text-white">
+                  The Impact of Sleep on Cognitive Function in Adolescents
+                </h3>
                 <p className="text-white/80 mb-4 line-clamp-2">
-                  Discover how our brains adapt and change throughout our lives, and what this means for learning and
-                  recovery.
+                  Research on how sleep affects brain development and academic performance in high school students.
                 </p>
                 <Link
-                  href="/blog/neural-plasticity"
+                  href="/blog/sleep-cognitive-function"
                   className="text-secondary-light font-medium inline-flex items-center hover:underline"
                 >
                   Read more <ChevronRight size={16} className="ml-1" />
                 </Link>
               </div>
             </div>
-
-            {/* Blog Post 3 */}
-            <div className="bg-card rounded-lg overflow-hidden border border-white/10">
-              <div className="relative h-48">
-                <Image src="/images/engineering.jpg" alt="Blog Post" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center space-x-2 mb-3">
-                  <span className="px-3 py-1 bg-primary/20 text-primary-light text-xs rounded-full">Engineering</span>
-                  <span className="text-white/60 text-xs">February 28, 2025</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">Sustainable Energy Solutions</h3>
-                <p className="text-white/80 mb-4 line-clamp-2">
-                  Exploring innovative approaches to renewable energy that could help address climate change challenges.
-                </p>
-                <Link
-                  href="/blog/sustainable-energy"
-                  className="text-primary-light font-medium inline-flex items-center hover:underline"
-                >
-                  Read more <ChevronRight size={16} className="ml-1" />
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Blog Post 4 */}
-            <div className="bg-card rounded-lg overflow-hidden border border-white/10">
-              <div className="flex flex-col md:flex-row">
-                <div className="relative h-48 md:h-auto md:w-1/3">
-                  <Image src="/images/psychology.jpg" alt="Blog Post" fill className="object-cover" />
-                </div>
-                <div className="p-6 md:w-2/3">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="px-3 py-1 bg-secondary/20 text-secondary-light text-xs rounded-full">
-                      Psychology
-                    </span>
-                    <span className="text-white/60 text-xs">February 20, 2025</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">The Psychology of Decision-Making</h3>
-                  <p className="text-white/80 mb-4 line-clamp-2">
-                    Understanding the cognitive processes that influence how we make choices in everyday life.
-                  </p>
-                  <Link
-                    href="/blog/decision-making"
-                    className="text-secondary-light font-medium inline-flex items-center hover:underline"
-                  >
-                    Read more <ChevronRight size={16} className="ml-1" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Blog Post 5 */}
-            <div className="bg-card rounded-lg overflow-hidden border border-white/10">
-              <div className="flex flex-col md:flex-row">
-                <div className="relative h-48 md:h-auto md:w-1/3">
-                  <Image src="/images/physics.jpg" alt="Blog Post" fill className="object-cover" />
-                </div>
-                <div className="p-6 md:w-2/3">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="px-3 py-1 bg-primary/20 text-primary-light text-xs rounded-full">Physics</span>
-                    <span className="text-white/60 text-xs">February 15, 2025</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Exploring Dark Matter Theories</h3>
-                  <p className="text-white/80 mb-4 line-clamp-2">
-                    A look at current theories about dark matter and its role in the universe.
-                  </p>
-                  <Link
-                    href="/blog/dark-matter"
-                    className="text-primary-light font-medium inline-flex items-center hover:underline"
-                  >
-                    Read more <ChevronRight size={16} className="ml-1" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 flex justify-center">
-            <nav className="inline-flex rounded-lg overflow-hidden bg-card/50 p-1 border border-white/10">
-              <button className="px-3 py-1 text-white/50 hover:text-white transition-colors">Previous</button>
-              <button className="px-3 py-1 rounded-md bg-primary text-white">1</button>
-              <button className="px-3 py-1 text-white/50 hover:text-white transition-colors">2</button>
-              <button className="px-3 py-1 text-white/50 hover:text-white transition-colors">3</button>
-              <button className="px-3 py-1 text-white/50 hover:text-white transition-colors">Next</button>
-            </nav>
           </div>
         </div>
       </section>
@@ -271,34 +188,20 @@ export default function Blog() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold mb-8 text-white">Categories</h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
               href="/blog/category/physics"
               className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-primary/50 transition-colors"
             >
               <h3 className="text-xl font-bold mb-2 text-white">Physics</h3>
-              <p className="text-white/60 text-sm">12 articles</p>
+              <p className="text-white/60 text-sm">1 article</p>
             </Link>
             <Link
               href="/blog/category/neuroscience"
               className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-secondary/50 transition-colors"
             >
               <h3 className="text-xl font-bold mb-2 text-white">Neuroscience</h3>
-              <p className="text-white/60 text-sm">8 articles</p>
-            </Link>
-            <Link
-              href="/blog/category/engineering"
-              className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-primary/50 transition-colors"
-            >
-              <h3 className="text-xl font-bold mb-2 text-white">Engineering</h3>
-              <p className="text-white/60 text-sm">10 articles</p>
-            </Link>
-            <Link
-              href="/blog/category/psychology"
-              className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-secondary/50 transition-colors"
-            >
-              <h3 className="text-xl font-bold mb-2 text-white">Psychology</h3>
-              <p className="text-white/60 text-sm">7 articles</p>
+              <p className="text-white/60 text-sm">1 article</p>
             </Link>
           </div>
         </div>
@@ -329,4 +232,3 @@ export default function Blog() {
     </div>
   )
 }
-

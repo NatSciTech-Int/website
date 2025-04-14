@@ -3,20 +3,21 @@ import Link from "next/link"
 import { Check, ArrowRight, BookOpen, Lightbulb, Target } from "lucide-react"
 import type { Metadata } from "next"
 
+// Update the metadata
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about the Natural Science & Technology Organization, our mission, vision, values, and the team behind our international high school science community.",
+    "Learn about the Library of Science, our mission, vision, values, and the team behind our international high school science community.",
   openGraph: {
-    title: "About NatSciTech",
+    title: "About LibSci",
     description:
-      "Learn about the Natural Science & Technology Organization, our mission, vision, values, and the team behind our international high school science community.",
+      "Learn about the Library of Science, our mission, vision, values, and the team behind our international high school science community.",
   },
 }
 
 export default function About() {
   return (
-    <div className="pt-20">
+    <div className="pt-24">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -29,10 +30,11 @@ export default function About() {
             <div className="inline-block px-4 py-1 rounded-full text-xs font-medium bg-muted text-white/90 mb-6">
               About Us
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">About NatSciTech</h1>
+            {/* Update the hero section */}
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">About LibSci</h1>
             <p className="text-xl text-white/80">
-              The Natural Science & Technology Organization is a non-profit working for the academic development of
-              natural sciences and technologies on an international scale.
+              The Library of Science is a non-profit working for the academic development of natural sciences and
+              technologies on an international scale.
             </p>
           </div>
         </div>
@@ -297,4 +299,3 @@ export default function About() {
     </div>
   )
 }
-

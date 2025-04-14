@@ -3,18 +3,19 @@ import { Mail, Instagram, Globe, MapPin, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import type { Metadata } from "next"
 
+// Update the metadata
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with the Natural Science & Technology Organization. We'd love to hear from you!",
+  description: "Get in touch with the Library of Science. We'd love to hear from you!",
   openGraph: {
-    title: "Contact NatSciTech",
-    description: "Get in touch with the Natural Science & Technology Organization. We'd love to hear from you!",
+    title: "Contact LibSci",
+    description: "Get in touch with the Library of Science. We'd love to hear from you!",
   },
 }
 
 export default function Contact() {
   return (
-    <div className="pt-20">
+    <div className="pt-24">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -52,9 +53,9 @@ export default function Contact() {
               <div className="bg-card/50 backdrop-blur-sm rounded-xl p-8 border border-white/10 shadow-lg">
                 <h2 className="text-3xl font-bold mb-8 gradient-text">Connect With Us</h2>
                 <p className="text-white/80 mb-8">
-                  The Natural Science & Technology Organization is a global community of high school students passionate
-                  about science and technology. We're always looking to connect with students, educators, and
-                  organizations who share our mission.
+                  The Library of Science is a global community of high school students passionate about science and
+                  technology. We're always looking to connect with students, educators, and organizations who share our
+                  mission.
                 </p>
 
                 <div className="space-y-6">
@@ -65,10 +66,10 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                       <a
-                        href="mailto:contact@natscitech.org"
+                        href="mailto:contact@libsci.org"
                         className="text-white/80 hover:text-primary-light transition-colors"
                       >
-                        contact@natscitech.org
+                        contact@libsci.org
                       </a>
                     </div>
                   </div>
@@ -80,12 +81,12 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">Instagram</h3>
                       <a
-                        href="https://www.instagram.com/natscitech/"
+                        href="https://www.instagram.com/libsci/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white/80 hover:text-secondary-light transition-colors"
                       >
-                        @natscitech
+                        @libsci
                       </a>
                     </div>
                   </div>
@@ -97,12 +98,12 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">Website</h3>
                       <a
-                        href="https://natscitech.vercel.app"
+                        href="https://libsci.vercel.app"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white/80 hover:text-primary-light transition-colors"
                       >
-                        natscitech.vercel.app
+                        libsci.vercel.app
                       </a>
                     </div>
                   </div>
@@ -243,4 +244,3 @@ export default function Contact() {
     </div>
   )
 }
-

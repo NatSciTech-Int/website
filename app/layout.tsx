@@ -8,41 +8,41 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 
 export const metadata = {
   title: {
-    default: "Natural Science & Technology Organization",
-    template: "%s | NatSciTech",
+    default: "Library of Science",
+    template: "%s | LibSci",
   },
   description: "International high school club promoting science and technology education for students worldwide",
   keywords: ["science", "technology", "education", "high school", "research", "STEM", "international", "students"],
-  authors: [{ name: "NatSciTech" }],
-  creator: "NatSciTech",
-  publisher: "NatSciTech",
+  authors: [{ name: "LibSci" }],
+  creator: "LibSci",
+  publisher: "LibSci",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://natscitech.vercel.app",
-    siteName: "Natural Science & Technology Organization",
-    title: "Natural Science & Technology Organization",
+    url: "https://libsci.vercel.app",
+    siteName: "Library of Science",
+    title: "Library of Science",
     description: "International high school club promoting science and technology education",
     images: [
       {
-        url: "https://natscitech.vercel.app/og-image.jpg",
+        url: "https://libsci.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "NatSciTech",
+        alt: "LibSci",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Natural Science & Technology Organization",
+    title: "Library of Science",
     description: "International high school club promoting science and technology education",
-    images: ["https://natscitech.vercel.app/og-image.jpg"],
+    images: ["https://libsci.vercel.app/og-image.jpg"],
   },
   robots: {
     index: true,
     follow: true,
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -63,6 +63,7 @@ export default function RootLayout({
   )
 }
 
+import "./globals.css"
 
 
 import './globals.css'

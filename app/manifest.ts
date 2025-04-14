@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Natural Science & Technology Organization",
-    short_name: "NatSciTech",
+    name: "Library of Science",
+    short_name: "LibSci",
     description: "International high school club promoting science and technology education",
     start_url: "/",
     display: "standalone",
@@ -28,4 +28,3 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
   }
 }
-
