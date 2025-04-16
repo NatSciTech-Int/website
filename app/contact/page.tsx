@@ -6,11 +6,12 @@ import type { Metadata } from "next"
 // Update the metadata
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with the Library of Science. We'd love to hear from you!",
+  description: "Get in touch with Liberation Science. We'd love to hear from you!",
   openGraph: {
     title: "Contact LibSci",
-    description: "Get in touch with the Library of Science. We'd love to hear from you!",
+    description: "Get in touch with Liberation Science. We'd love to hear from you!",
   },
+  keywords: ["contact", "Liberation Science", "LibSci", "Joshua Fung", "Adil Mukhi", "science education"],
 }
 
 export default function Contact() {
@@ -53,7 +54,7 @@ export default function Contact() {
               <div className="bg-card/50 backdrop-blur-sm rounded-xl p-8 border border-white/10 shadow-lg">
                 <h2 className="text-3xl font-bold mb-8 gradient-text">Connect With Us</h2>
                 <p className="text-white/80 mb-8">
-                  The Library of Science is a global community of high school students passionate about science and
+                  Liberation Science is a global community of high school students passionate about science and
                   technology. We're always looking to connect with students, educators, and organizations who share our
                   mission.
                 </p>
@@ -66,10 +67,10 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                       <a
-                        href="mailto:contact@libsci.org"
+                        href="mailto:contact@libsci.tech"
                         className="text-white/80 hover:text-primary-light transition-colors"
                       >
-                        contact@libsci.org
+                        contact@libsci.tech
                       </a>
                     </div>
                   </div>
@@ -98,12 +99,12 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">Website</h3>
                       <a
-                        href="https://libsci.vercel.app"
+                        href="https://libsci.tech"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white/80 hover:text-primary-light transition-colors"
                       >
-                        libsci.vercel.app
+                        libsci.tech
                       </a>
                     </div>
                   </div>
@@ -124,8 +125,8 @@ export default function Contact() {
                 <div className="p-8">
                   <h2 className="text-2xl font-bold mb-6 text-white">Get Involved</h2>
                   <p className="text-white/80 mb-8">
-                    There are many ways to get involved with NatSciTech. Whether you're interested in joining as a
-                    member, participating in our programs, or collaborating with us, we'd love to hear from you.
+                    There are many ways to get involved with Liberation Science. Whether you're interested in joining as
+                    a member, participating in our programs, or collaborating with us, we'd love to hear from you.
                   </p>
 
                   <div className="space-y-6">
@@ -184,7 +185,7 @@ export default function Contact() {
 
             <div className="space-y-6">
               <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-                <h3 className="text-lg font-semibold text-white mb-2">How can I join NatSciTech?</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">How can I join Liberation Science?</h3>
                 <p className="text-white/80">
                   You can join our organization by visiting our Join page and following the instructions there. We
                   welcome high school students from around the world who are passionate about science and technology.
@@ -209,7 +210,7 @@ export default function Contact() {
 
               <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-white/10">
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  Is NatSciTech only for students interested in certain fields?
+                  Is Liberation Science only for students interested in certain fields?
                 </h3>
                 <p className="text-white/80">
                   While we focus on Physics, Neuroscience, Engineering, and Psychology, we welcome students interested

@@ -7,12 +7,20 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about the Library of Science, our mission, vision, values, and the team behind our international high school science community.",
+    "Learn about Liberation Science, our mission, vision, values, and the team behind our international high school science community.",
   openGraph: {
     title: "About LibSci",
     description:
-      "Learn about the Library of Science, our mission, vision, values, and the team behind our international high school science community.",
+      "Learn about Liberation Science, our mission, vision, values, and the team behind our international high school science community.",
   },
+  keywords: [
+    "Liberation Science",
+    "LibSci",
+    "Joshua Fung",
+    "Adil Mukhi",
+    "science education",
+    "high school organization",
+  ],
 }
 
 export default function About() {
@@ -33,7 +41,7 @@ export default function About() {
             {/* Update the hero section */}
             <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">About LibSci</h1>
             <p className="text-xl text-white/80">
-              The Library of Science is a non-profit working for the academic development of natural sciences and
+              Liberation Science is a non-profit working for the academic development of natural sciences and
               technologies on an international scale.
             </p>
           </div>
@@ -74,8 +82,8 @@ export default function About() {
               <h2 className="text-3xl font-bold mb-6 gradient-text">Our Story</h2>
               <p className="text-white/80 mb-6">
                 Founded by passionate high school students with a shared interest in scientific exploration and
-                technological innovation, NatSciTech began as a small online forum for exchanging ideas and research
-                findings.
+                technological innovation, Liberation Science began as a small online forum for exchanging ideas and
+                research findings.
               </p>
               <p className="text-white/80 mb-6">
                 Today, we've grown into an international community of young scientists, researchers, and innovators
@@ -169,7 +177,7 @@ export default function About() {
               Our Team
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Leadership Team</h2>
-            <p className="text-white/80">Meet the dedicated students behind NatSciTech</p>
+            <p className="text-white/80">Meet the dedicated students behind Liberation Science</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

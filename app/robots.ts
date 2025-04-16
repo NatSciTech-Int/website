@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/private/", "/admin/"],
     },
-    sitemap: "https://natscitech.vercel.app/sitemap.xml",
+    sitemap: "https://libsci.tech/sitemap.xml",
   }
 }

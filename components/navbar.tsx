@@ -49,7 +49,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center space-x-3">
               <div className="relative w-10 h-10 sm:w-12 sm:h-12">
-                <Image src="/logo.png" alt="NatSciTech Logo" fill className="object-contain" />
+                <Image src="/logo.png" alt="LibSci Logo" fill className="object-contain" />
               </div>
               {/* Desktop Navigation */}
               <div className="hidden md:block">

@@ -12,6 +12,7 @@ import {
   Globe,
   ExternalLink,
 } from "lucide-react"
+import { JsonLd } from "@/components/json-ld"
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
                 <span className="gradient-text">Advancing</span> Science & Technology Education
               </h1>
               <p className="text-xl text-white/90 mb-8 max-w-xl leading-relaxed">
-                An international high school club fostering innovation and collaboration in natural sciences and
+                An international high school organization fostering innovation and collaboration in natural sciences and
                 technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -107,7 +108,7 @@ export default function Home() {
                   Contest Now Open
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">
-                  The NatSciTech March Blog Publication Contest
+                  The Liberation Science March Blog Publication Contest
                 </h3>
                 <p className="text-white/90 mb-8 leading-relaxed">
                   Choose any subject related to Physics, Neuroscience, Engineering, Psychology, or any combination of
@@ -122,7 +123,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-2">1st Place</h4>
-                        <p className="text-sm text-white/80">Blog featured as NatSciTech's Student Feature</p>
+                        <p className="text-sm text-white/80">Blog featured as LibSci's Student Feature</p>
                       </div>
                     </div>
                   </div>
@@ -134,7 +135,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-2">2nd & 3rd Place</h4>
-                        <p className="text-sm text-white/80">Blogs featured on NatSciTech's March Blog</p>
+                        <p className="text-sm text-white/80">Blogs featured on LibSci's March Blog</p>
                       </div>
                     </div>
                   </div>
@@ -247,7 +248,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <div className="inline-block px-4 py-1 rounded-full text-xs font-medium bg-white/10 text-white mb-4">
-              Why Join NatSciTech?
+              Why Join Liberation Science?
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Become Part of Our Community</h2>
             <p className="text-white/90 text-lg">
@@ -394,6 +395,21 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Liberation Science",
+          url: "https://libsci.tech",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://libsci.tech/search?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+          keywords: ["science education", "high school", "Joshua Fung", "Adil Mukhi", "Liberation Science", "LibSci"],
+        }}
+      />
     </div>
   )
 }

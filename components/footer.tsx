@@ -13,7 +13,7 @@ const Footer = () => {
             <div>
               <div className="flex items-center space-x-3 mb-6">
                 <div className="relative w-12 h-12 bg-white/10 rounded-lg p-2">
-                  <Image src="/logo.png" alt="NatSciTech Logo" fill className="object-contain" />
+                  <Image src="/logo.png" alt="LibSci Logo" fill className="object-contain" />
                 </div>
                 <div>
                   <h2 className="font-bold text-2xl tracking-wide">
@@ -25,7 +25,7 @@ const Footer = () => {
               </div>
 
               <p className="text-white/80 mb-8 max-w-lg leading-relaxed">
-                The Library of Science is a non-profit working for the academic development of natural sciences and
+                Liberation Science is a non-profit working for the academic development of natural sciences and
                 technologies on an international scale, connecting high school students from around the world.
               </p>
 
@@ -167,11 +167,11 @@ const Footer = () => {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="mailto:contact@libsci.org"
+                      href="mailto:contact@libsci.tech"
                       className="text-white/70 hover:text-[rgb(var(--primary-light))] transition-colors flex items-center"
                     >
                       <Mail size={14} className="mr-2" />
-                      contact@libsci.org
+                      contact@libsci.tech
                     </a>
                   </li>
                   <li className="flex items-start">
@@ -180,13 +180,13 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="https://libsci.vercel.app"
+                      href="https://libsci.tech"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white/70 hover:text-[rgb(var(--primary-light))] transition-colors flex items-center"
                     >
                       <Globe size={14} className="mr-2" />
-                      libsci.vercel.app
+                      libsci.tech
                     </a>
                   </li>
                 </ul>
@@ -201,7 +201,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/60 text-sm mb-4 md:mb-0">
-              © {currentYear} Library of Science. All rights reserved.
+              © {currentYear} Liberation Science. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-white/60 hover:text-white text-sm transition-colors">

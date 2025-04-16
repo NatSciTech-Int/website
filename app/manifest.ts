@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Library of Science",
+    name: "Liberation Science",
     short_name: "LibSci",
-    description: "International high school club promoting science and technology education",
+    description: "International high school organization promoting science and technology education",
     start_url: "/",
     display: "standalone",
     background_color: "#0a101e",
